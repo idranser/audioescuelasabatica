@@ -1,9 +1,11 @@
 @echo off
 setlocal enabledelayedexpansion
 set year=25
-set month=03
+REM Cambiar el mes:
+set month=04
 
-for /L %%d in (1,1,31) do (
+REM Cambiar de 30 a 31 o viceversa segun la cantidad de dias del mes:
+for /L %%d in (1,1,30) do (
     if %%d LSS 10 (
         set day=0%%d
     ) else (
@@ -16,7 +18,7 @@ for /L %%d in (1,1,31) do (
     echo ^<head^>
     echo ^<meta charset="UTF-8"^> 
     echo ^<meta name="viewport" content="width=device-width, initial-scale=1.0"^>
-    echo ^<title^>Escuela Sabática^</title^>
+    echo ^<title^>Escuela Sabatica^</title^>
     echo ^</head^>
     echo ^<body^>
     echo ^<h3^>Escucha la lección de hoy:^</h3^>
@@ -25,5 +27,6 @@ for /L %%d in (1,1,31) do (
     echo ^</html^>
     ) > !day!!month!!year!.html
 )
-echo 28 archivos HTML creados con el contenido correcto.
+REM Cambiar de 30 a 31 o viceversa para reflejar los días del mes:
+echo 30 archivos HTML creados con el contenido correcto.
 pause
