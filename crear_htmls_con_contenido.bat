@@ -1,8 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
-set year=25
+set year=26
 REM Cambiar el mes:
-set month=12
+set month=01
 
 REM Cambiar de 30 a 31 o viceversa segun la cantidad de dias del mes:
 for /L %%d in (1,1,31) do (
