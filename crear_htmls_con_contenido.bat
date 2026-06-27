@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 set year=26
 REM Cambiar el mes:
-set month=01
+set month=07
 
 REM Cambiar de 30 a 31 o viceversa segun la cantidad de dias del mes:
 for /L %%d in (1,1,31) do (
